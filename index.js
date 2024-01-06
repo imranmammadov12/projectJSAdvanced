@@ -27,6 +27,7 @@ class TasksList {
     }
 }
 
+//add button
 
 const addBtn = document.querySelector('#addTaskBtn');
 
@@ -42,3 +43,4 @@ function openModal() {
 
 addBtn.addEventListener('click', openModal);
 closeBtn.addEventListener('click', closeModal);
+
