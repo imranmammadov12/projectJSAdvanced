@@ -26,3 +26,14 @@ class TasksList {
         return this.tasks.find(task => task.id === id);
     }
 }
+
+
+const addBtn = document.querySelector('#addTaskBtn');
+
+function openModal() {
+    document.querySelector('#taskModal').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.querySelector('#taskModal').style.display = 'none';
+  }
