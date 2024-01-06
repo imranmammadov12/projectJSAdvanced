@@ -30,6 +30,8 @@ class TasksList {
 
 const addBtn = document.querySelector('#addTaskBtn');
 
+const closeBtn = document.querySelector('.close');
+
 function openModal() {
     document.querySelector('#taskModal').style.display = 'flex';
   }
@@ -37,3 +39,6 @@ function openModal() {
   function closeModal() {
     document.querySelector('#taskModal').style.display = 'none';
   }
+
+addBtn.addEventListener('click', openModal);
+closeBtn.addEventListener('click', closeModal);
