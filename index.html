@@ -3,14 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Task Manager</title>
-    <script defer src="index.js"></script>
     <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
 </head>
 <body>
     <div class="task-manager">
         <h1>Task Manager</h1>
+        <label for="sortSelect">Sort by:</label>
+        <select id="sortSelect">
+            <option value="date">Date</option>
+            <option value="name">Name</option>
+        </select>
+
+        <label for="filterSelect">Filter by:</label>
+        <select id="filterSelect">
+            <option value="all">All</option>
+            <option value="done">Done</option>
+            <option value="notDone">Not Done</option>
+        </select>
+
         <div class="task-list"></div>
         <button id="addTaskBtn">Add Task</button>
+        <button id="removeSelectedTaskBtn">Remove Selected Task</button>
     </div>
     <div class="modal" id="taskModal">
         <div class="modal-content">
@@ -18,13 +32,11 @@
             <form id="taskForm">
                 <input type="text" id="taskTitle" placeholder="Title">
                 <textarea id="taskDescription" placeholder="Description"></textarea>
-                <select id="taskStatus">
-                    <option value="notDone">Not Done</option>
-                    <option value="done">Done</option>
-                </select>
-                <button type="submit">Save</button>
+                <button type="submit" id="save">Save</button>
             </form>
         </div>
     </div>
 </body>
 </html>
+
+
